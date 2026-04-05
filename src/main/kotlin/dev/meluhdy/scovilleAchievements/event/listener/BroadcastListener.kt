@@ -12,7 +12,7 @@ object BroadcastListener: Listener {
 
     @EventHandler
     fun on(e: GrantAchievementEvent) {
-        TextUtils.broadcastChat(ScovilleAchievements.plugin, "achievement.broadcast", text(e.ach.diff.color), text(e.player.name), TranslatedString(e.ach.nameId, arrayOf()))
+        TextUtils.broadcastChat(ScovilleAchievements.plugin, "chat.achievement.broadcast", text(e.ach.diff.color), text(e.player.name), TranslatedString(e.ach.nameId, arrayOf()))
     }
 
 }
