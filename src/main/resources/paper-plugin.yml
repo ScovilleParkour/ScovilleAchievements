@@ -1,0 +1,21 @@
+name: ScovilleAchievements
+description: $description
+prefix: ScovilleAchievements
+version: '$version'
+
+main: dev.meluhdy.scovilleAchievements.ScovilleAchievements
+api-version: '1.21.11'
+load: POSTWORLD
+
+authors: [ meluwudy ]
+website: https://meluhdy.dev
+
+dependencies:
+  server:
+    Melodia:
+      load: BEFORE
+      required: true
+      join-classpath: true
+    Scoville:
+      load: BEFORE
+      required: true
