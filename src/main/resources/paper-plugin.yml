@@ -1,5 +1,5 @@
 name: ScovilleAchievements
-description: $description
+description: '$description'
 prefix: ScovilleAchievements
 version: '$version'
 
