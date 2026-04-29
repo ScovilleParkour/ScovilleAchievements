@@ -16,6 +16,6 @@ dependencies:
       load: BEFORE
       required: true
       join-classpath: true
-    Scoville:
+    ScovilleCore:
       load: BEFORE
       required: true
