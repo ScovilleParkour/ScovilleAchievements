@@ -5,7 +5,7 @@ import dev.meluhdy.scoville.achievement.Achievement
 import dev.meluhdy.scoville.core.course.courses.RankupCourse
 import dev.meluhdy.scoville.core.parkourer.ParkourerManager
 import dev.meluhdy.scoville.event.event.CourseCompleteEvent
-import dev.meluhdy.scoville.misc.PermissionUtils
+import dev.meluhdy.scoville.misc.track.RankTrack
 import org.bukkit.entity.Player
 import org.bukkit.event.EventPriority
 import org.bukkit.inventory.ItemStack
@@ -23,7 +23,7 @@ object AddingSomeFlavorAchievement: Achievement<CourseCompleteEvent>(EventPriori
     override fun check(event: CourseCompleteEvent): Boolean {
         val player = event.player
         val parkourer = ParkourerManager.get(player) ?: return false
-        val rank = PermissionUtils.getRank(parkourer)
+        val rank = RankTrack.fromPlayer(parkourer.getPlayer()!!)
 
         return rank > RankupCourse.Rank.GUAJILLO
     }
