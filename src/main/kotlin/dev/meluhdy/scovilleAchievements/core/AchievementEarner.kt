@@ -4,7 +4,7 @@ import dev.meluhdy.melodia.manager.MelodiaItem
 import dev.meluhdy.melodia.misc.serialization.MelodiaSerializer
 import dev.meluhdy.melodia.misc.serialization.SerializerElement
 import dev.meluhdy.scoville.achievement.Achievement
-import dev.meluhdy.scoville.achievement.AchievementManager
+import dev.meluhdy.scovilleAchievements.achievement.AchievementManager
 import dev.meluhdy.scoville.core.parkourer.Parkourer
 import dev.meluhdy.scoville.core.parkourer.ParkourerManager
 import kotlinx.serialization.builtins.ListSerializer

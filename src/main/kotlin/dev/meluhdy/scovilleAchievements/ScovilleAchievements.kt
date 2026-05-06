@@ -6,7 +6,7 @@ import dev.meluhdy.melodia.manager.MelodiaSavingManager
 import dev.meluhdy.melodia.utils.ConsoleLogger
 import dev.meluhdy.melodia.utils.LoggingUtils
 import dev.meluhdy.melodia.utils.TranslationFolder
-import dev.meluhdy.scoville.achievement.AchievementManager
+import dev.meluhdy.scovilleAchievements.achievement.AchievementManager
 import dev.meluhdy.scovilleAchievements.core.AchievementEarnerManager
 import dev.meluhdy.scovilleAchievements.event.listener.BroadcastListener
 import org.bukkit.event.Listener

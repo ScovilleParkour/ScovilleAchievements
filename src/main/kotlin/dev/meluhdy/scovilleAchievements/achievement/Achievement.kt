@@ -7,6 +7,8 @@ import dev.meluhdy.scovilleAchievements.ScovilleAchievements
 import dev.meluhdy.scovilleAchievements.core.toAchievementEarner
 import dev.meluhdy.scovilleAchievements.event.event.GrantAchievementEvent
 import org.bukkit.Bukkit
+import org.bukkit.FireworkEffect
+import org.bukkit.entity.Firework
 import org.bukkit.entity.Player
 import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
@@ -58,5 +60,12 @@ abstract class Achievement<T: PlayerEvent>(val priority: EventPriority): Melodia
     abstract fun check(event: T): Boolean
 
     abstract fun onAchievementGet(p: Player)
+
+    fun spawnFirework(p: Player, effect: FireworkEffect) {
+        val firework = p.world.spawn(p.location, Firework::class.java)
+        val meta = firework.fireworkMeta
+        meta.addEffect(effect)
+        Bukkit.getScheduler().scheduleSyncDelayedTask(ScovilleAchievements.plugin, { firework.detonate() }, 2L)
+    }
 
 }

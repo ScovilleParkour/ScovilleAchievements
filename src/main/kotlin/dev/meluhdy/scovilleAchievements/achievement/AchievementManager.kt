@@ -1,10 +1,10 @@
-package dev.meluhdy.scoville.achievement
+package dev.meluhdy.scovilleAchievements.achievement
 
 import dev.meluhdy.melodia.manager.MelodiaSavingManager
 import dev.meluhdy.melodia.misc.serialization.MelodiaSerializer
-import dev.meluhdy.scoville.achievement.easy.AddingSomeFlavorAchievement
+import dev.meluhdy.scoville.achievement.Achievement
+import dev.meluhdy.scovilleAchievements.achievement.easy.AddingSomeFlavorAchievement
 import dev.meluhdy.scovilleAchievements.ScovilleAchievements
-import dev.meluhdy.scovilleAchievements.achievement.easy.TestAchievement
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonPrimitive
@@ -13,8 +13,7 @@ import java.io.File
 object AchievementManager : MelodiaSavingManager<Achievement<*>>() {
 
     private val achievements: Array<Achievement<*>> = arrayOf(
-        AddingSomeFlavorAchievement,
-        TestAchievement
+        AddingSomeFlavorAchievement
     )
 
     val baseFolder
