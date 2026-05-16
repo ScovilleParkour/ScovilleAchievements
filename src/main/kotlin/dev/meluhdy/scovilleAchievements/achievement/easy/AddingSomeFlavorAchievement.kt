@@ -34,9 +34,10 @@ object AddingSomeFlavorAchievement: Achievement<CourseCompleteEvent>(EventPriori
     override fun onAchievementGet(p: Player) = spawnFirework(
         p,
         FireworkEffect.builder()
-            .with(FireworkEffect.Type.STAR)
-            .withColor(Color.GREEN)
-            .withFade(Color.LIME)
+            .with(FireworkEffect.Type.BALL)
+            .flicker(false)
+            .trail(false)
+            .withColor(Color.fromRGB(94, 124, 22))
             .build()
     )
 
